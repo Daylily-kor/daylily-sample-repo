@@ -1,0 +1,22 @@
+{
+  "name": "daylily-sample-repo",
+  "version": "1.0.0",
+  "description": "A sample docker containerizable repository",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^24.0.15",
+    "@types/winston": "^2.4.4",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "winston": "^3.17.0"
+  }
+}

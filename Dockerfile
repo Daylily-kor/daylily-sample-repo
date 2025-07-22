@@ -64,7 +64,7 @@ COPY --from=build /usr/src/app/dist ./dist
 
 
 # Expose the port that the application listens on.
-EXPOSE 8080
+EXPOSE 12345
 
 # Run the application.
 CMD ["node", "dist/index.js"]

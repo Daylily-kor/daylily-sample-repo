@@ -4,7 +4,8 @@ import { logger } from './logger';
 const server = http.createServer((req, res) => {
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');
-    res.end('Hello, World!');
+    res.write(`Request: ${req.method} ${req.url}\n`);
+    res.end('Message: Hello, World from Node.js!\n');
 });
 
 server.on('request', (req, res) => {
@@ -17,8 +18,8 @@ server.on('error', (err) => {
 });
 
 server.listen({
-    port: 8080,
+    port: 12345,
     reusePort: true
 }, () => {
-    logger.log('info', 'Server is listening on http://0.0.0.0:8080');
+    logger.log('info', 'Server is listening on http://0.0.0.0:12345');
 });
